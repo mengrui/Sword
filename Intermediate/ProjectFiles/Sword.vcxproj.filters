@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Sword.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{ECC553AB-611E-4DE4-8CBB-E6764269C95B}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Sword.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\SwordEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{16AA2D7B-1F65-4625-852F-B12DADD3FAFC}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Sword">
+			<UniqueIdentifier>{CF948A80-393F-42AC-88F2-7264C2B6861D}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\Sword\AnimDataAsset.cpp">
+			<Filter>Source\Sword</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Sword\AnimDataAsset.h">
+			<Filter>Source\Sword</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\Sword\Sword.Build.cs">
+			<Filter>Source\Sword</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Sword\Sword.cpp">
+			<Filter>Source\Sword</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Sword\Sword.h">
+			<Filter>Source\Sword</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Sword\SwordCharacter.cpp">
+			<Filter>Source\Sword</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Sword\SwordCharacter.h">
+			<Filter>Source\Sword</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Sword\SwordGameMode.cpp">
+			<Filter>Source\Sword</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Sword\SwordGameMode.h">
+			<Filter>Source\Sword</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

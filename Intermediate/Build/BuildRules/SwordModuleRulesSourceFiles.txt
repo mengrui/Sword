@@ -1,0 +1,3 @@
+D:\Unreal Projects\Sword\Source\Sword\Sword.Build.cs
+D:\Unreal Projects\Sword\Source\Sword.Target.cs
+D:\Unreal Projects\Sword\Source\SwordEditor.Target.cs
