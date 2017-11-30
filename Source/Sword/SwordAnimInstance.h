@@ -19,7 +19,7 @@ public:
 	class UAnimSequence* GetComboAnimSequence(class UAnimDataAsset* Asset,int InputIndex);
 
 	UFUNCTION(BlueprintCallable)
-	class UMetaData* GetMetaData(const UAnimSequence* Sequnce) const;
+	class UAnimMetaData* GetMetaData(UAnimSequence* Sequnce,int Index) const;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<int> ComboInputCache;

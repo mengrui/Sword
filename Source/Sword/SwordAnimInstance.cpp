@@ -26,11 +26,14 @@ UAnimSequence* USwordAnimInstance::GetComboAnimSequence(class UAnimDataAsset* As
 	return nullptr;
 }
 
-UMetaData* USwordAnimInstance::GetMetaData(const UAnimSequence* Sequnce) const
+UAnimMetaData* USwordAnimInstance::GetMetaData(UAnimSequence* Sequnce,int Index) const
 {
 	if (Sequnce)
 	{
-		Sequnce->GetMetaData()
+		if (Sequnce->GetMetaData().Num()>Index)
+		{
+			return Sequnce->GetMetaData()[Index];
+		}
 	}
 
 	return nullptr;
