@@ -1,3 +1,0 @@
-E:\aliyun\Sword\Source\Sword\Sword.Build.cs
-E:\aliyun\Sword\Source\Sword.Target.cs
-E:\aliyun\Sword\Source\SwordEditor.Target.cs
