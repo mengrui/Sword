@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 	SWORD_API UClass* Z_Construct_UClass_ASwordCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Sword();
+	SWORD_API UClass* Z_Construct_UClass_UAnimDataAsset_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
@@ -43,6 +44,13 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 				{ "ModuleRelativePath", "SwordCharacter.h" },
 			};
 #endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSet_MetaData[] = {
+				{ "Category", "Pawn" },
+				{ "ModuleRelativePath", "SwordCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimSet = { UE4CodeGen_Private::EPropertyClass::Object, "AnimSet", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, AnimSet), Z_Construct_UClass_UAnimDataAsset_NoRegister, METADATA_PARAMS(NewProp_AnimSet_MetaData, ARRAY_COUNT(NewProp_AnimSet_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[] = {
 				{ "Category", "Camera" },
@@ -80,6 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom = { UE4CodeGen_Private::EPropertyClass::Object, "CameraBoom", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_CameraBoom_MetaData, ARRAY_COUNT(NewProp_CameraBoom_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_AnimSet,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseLookUpRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseTurnRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FollowCamera,
@@ -103,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASwordCharacter, 3665716511);
+	IMPLEMENT_CLASS(ASwordCharacter, 2547697625);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASwordCharacter(Z_Construct_UClass_ASwordCharacter, &ASwordCharacter::StaticClass, TEXT("/Script/Sword"), TEXT("ASwordCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASwordCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

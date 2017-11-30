@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeSword_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Sword",
 				PKG_CompiledIn | 0x00000000,
-				0xDFC12840,
-				0x375B3D9C,
+				0xF9769F9B,
+				0x9F4C2CE7,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -24,9 +24,9 @@
 /wd4838
 /w44668
 /I "D:\Epic Games\UE_4.18\Engine\Source"
-/I "D:\Unreal Projects\Sword\Source"
-/I "D:\Unreal Projects\Sword\Intermediate\Build\Win64\UE4Editor\Inc\Sword"
-/I "D:\Unreal Projects\Sword\Source\Sword"
+/I E:\aliyun\Sword\Source
+/I E:\aliyun\Sword\Intermediate\Build\Win64\UE4Editor\Inc\Sword
+/I E:\aliyun\Sword\Source\Sword
 /I "D:\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public"
 /I "D:\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "D:\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public\Async"
@@ -359,9 +359,9 @@
 /FI"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Unreal Projects\Sword\Source\Sword\AnimDataAsset.cpp"
-/FI"D:\Unreal Projects\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Definitions.Sword.h"
-/Fo"D:\Unreal Projects\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.cpp.obj"
+"E:\aliyun\Sword\Source\Sword\AnimDataAsset.cpp"
+/FI"E:\aliyun\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Definitions.Sword.h"
+/Fo"E:\aliyun\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.cpp.obj"
 /TP
 /GR-
 /W4

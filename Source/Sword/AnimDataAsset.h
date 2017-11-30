@@ -5,15 +5,31 @@
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "Animation/AnimSequence.h"
+#include "UnrealTemplate.h"
+#include "Animation/AnimMetaData.h"
 #include "AnimDataAsset.generated.h"
+
+USTRUCT(BlueprintType)
+struct SWORD_API FAttackCombo
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	TArray<INT> InputIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UAnimSequence*> AnimSequence;
+};
+
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class SWORD_API UAnimDataAsset : public UDataAsset
 {
 	GENERATED_BODY()
-	
-	UPROPERTY(EditAnywhere)
-	TMap<FName,UAnimSequence*> AnimationMap;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FAttackCombo> Combos;
 };

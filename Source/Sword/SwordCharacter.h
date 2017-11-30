@@ -29,6 +29,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn)
+	class UAnimDataAsset*		AnimSet;
+
 protected:
 
 	/** Resets HMD orientation in VR. */
