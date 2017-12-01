@@ -9,7 +9,7 @@
 #include "Animation/AnimMetaData.h"
 #include "AnimDataAsset.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT(Blueprintable)
 struct SWORD_API FAttackCombo
 {
 	GENERATED_USTRUCT_BODY()
@@ -24,7 +24,7 @@ struct SWORD_API FAttackCombo
 /**
  * 
  */
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SWORD_API UAnimDataAsset : public UDataAsset
 {
 	GENERATED_BODY()
@@ -32,4 +32,7 @@ class SWORD_API UAnimDataAsset : public UDataAsset
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FAttackCombo> Combos;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UAnimSequence*> SpecialAttack;
 };
