@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Sword.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D33C906E-1B2A-49D9-97B7-C80D61B99743}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Sword.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SwordEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{3119261D-08B8-4C9E-B80F-9C865CDF1636}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Sword">
+      <UniqueIdentifier>{BB885691-EC8C-4E37-A20A-0B7B09E2A972}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Sword\AnimDataAsset.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Sword\AnimDataAsset.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Sword\Sword.Build.cs">
+      <Filter>Source\Sword</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Sword\Sword.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Sword\Sword.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Sword\SwordCharacter.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Sword\SwordCharacter.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Sword\SwordGameMode.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Sword\SwordGameMode.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Sword\SwordAnimInstance.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Sword\CustomData.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Sword\SwordAnimInstance.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Sword\CustomData.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

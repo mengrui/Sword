@@ -1,0 +1,24 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Sword-9112.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\CustomData.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Sword.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordAnimInstance.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordCharacter.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordGameMode.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\CustomData.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Sword.init.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordAnimInstance.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordCharacter.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordGameMode.gen.cpp.obj"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Sword\PCLaunch.rc.res"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword-9112.lib"

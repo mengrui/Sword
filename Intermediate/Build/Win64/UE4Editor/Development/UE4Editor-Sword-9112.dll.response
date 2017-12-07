@@ -1,0 +1,76 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\CustomData.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Sword.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordAnimInstance.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordCharacter.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordGameMode.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\AnimDataAsset.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\CustomData.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\Sword.init.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordAnimInstance.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordCharacter.gen.cpp.obj"
+"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\Sword\SwordGameMode.gen.cpp.obj"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Sword\PCLaunch.rc.res"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Engine.lib"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
+"D:\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
+/OUT:"E:\Sword\Binaries\Win64\UE4Editor-Sword-9112.dll"
+/IMPLIB:"E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword-9112.suppressed.lib"
+/PDB:"E:\Sword\Binaries\Win64\UE4Editor-Sword-9112.pdb"
+/ignore:4078
