@@ -67,12 +67,18 @@
     <ClInclude Include="..\..\Source\Sword\CustomData.h">
       <Filter>Source\Sword</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Sword\TrackCollisionComponent.h">
+      <Filter>Source\Sword</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Sword\SwordAnimInstance.cpp">
       <Filter>Source\Sword</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Sword\CustomData.cpp">
+      <Filter>Source\Sword</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Sword\TrackCollisionComponent.cpp">
       <Filter>Source\Sword</Filter>
     </ClCompile>
   </ItemGroup>

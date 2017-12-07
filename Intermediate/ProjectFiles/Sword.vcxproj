@@ -788,6 +788,8 @@
     <NMakeOutput>..\..\Binaries\HTML5\Sword-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Sword\TrackCollisionComponent.cpp" />
+    <ClInclude Include="..\..\Source\Sword\TrackCollisionComponent.h" />
     <None Include="..\..\Sword.uproject" />
     <None Include="..\..\Source\Sword.Target.cs" />
     <None Include="..\..\Source\SwordEditor.Target.cs" />
