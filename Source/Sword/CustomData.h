@@ -17,4 +17,7 @@ class SWORD_API UCustomData : public UAnimMetaData
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float ComboStartTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ApplyForce;
 };
