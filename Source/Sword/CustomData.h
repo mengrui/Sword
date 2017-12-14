@@ -6,6 +6,15 @@
 #include "Animation/AnimMetaData.h"
 #include "CustomData.generated.h"
 
+UENUM(BlueprintType)
+enum EHitType
+{
+	EHit_Inplace UMETA(DisplayName = "Inplace"),
+	EHit_InplaceDown UMETA(DisplayName = "InplaceDown"),
+	EHit_BackDown UMETA(DisplayName = "BackDown"),
+	EHit_Floating UMETA(DisplayName = "Floating"),
+	EHit_Stun UMETA(DisplayName = "Stun")
+};
 /**
  * 
  */
@@ -19,5 +28,5 @@ public:
 	float ComboStartTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float ApplyForce;
+	TEnumAsByte<EHitType> HitType;
 };

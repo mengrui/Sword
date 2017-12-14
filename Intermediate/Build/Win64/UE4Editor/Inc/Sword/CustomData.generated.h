@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SWORD_CustomData_generated_h
 
-#define Sword_Source_Sword_CustomData_h_15_RPC_WRAPPERS
-#define Sword_Source_Sword_CustomData_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Sword_Source_Sword_CustomData_h_15_INCLASS_NO_PURE_DECLS \
+#define Sword_Source_Sword_CustomData_h_24_RPC_WRAPPERS
+#define Sword_Source_Sword_CustomData_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define Sword_Source_Sword_CustomData_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCustomData(); \
 	friend SWORD_API class UClass* Z_Construct_UClass_UCustomData(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Sword_Source_Sword_CustomData_h_15_INCLASS \
+#define Sword_Source_Sword_CustomData_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesUCustomData(); \
 	friend SWORD_API class UClass* Z_Construct_UClass_UCustomData(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Sword_Source_Sword_CustomData_h_15_STANDARD_CONSTRUCTORS \
+#define Sword_Source_Sword_CustomData_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCustomData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCustomData) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define Sword_Source_Sword_CustomData_h_15_ENHANCED_CONSTRUCTORS \
+#define Sword_Source_Sword_CustomData_h_24_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCustomData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -61,26 +61,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCustomData); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCustomData)
 
 
-#define Sword_Source_Sword_CustomData_h_15_PRIVATE_PROPERTY_OFFSET
-#define Sword_Source_Sword_CustomData_h_12_PROLOG
-#define Sword_Source_Sword_CustomData_h_15_GENERATED_BODY_LEGACY \
+#define Sword_Source_Sword_CustomData_h_24_PRIVATE_PROPERTY_OFFSET
+#define Sword_Source_Sword_CustomData_h_21_PROLOG
+#define Sword_Source_Sword_CustomData_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Sword_Source_Sword_CustomData_h_15_PRIVATE_PROPERTY_OFFSET \
-	Sword_Source_Sword_CustomData_h_15_RPC_WRAPPERS \
-	Sword_Source_Sword_CustomData_h_15_INCLASS \
-	Sword_Source_Sword_CustomData_h_15_STANDARD_CONSTRUCTORS \
+	Sword_Source_Sword_CustomData_h_24_PRIVATE_PROPERTY_OFFSET \
+	Sword_Source_Sword_CustomData_h_24_RPC_WRAPPERS \
+	Sword_Source_Sword_CustomData_h_24_INCLASS \
+	Sword_Source_Sword_CustomData_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Sword_Source_Sword_CustomData_h_15_GENERATED_BODY \
+#define Sword_Source_Sword_CustomData_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Sword_Source_Sword_CustomData_h_15_PRIVATE_PROPERTY_OFFSET \
-	Sword_Source_Sword_CustomData_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Sword_Source_Sword_CustomData_h_15_INCLASS_NO_PURE_DECLS \
-	Sword_Source_Sword_CustomData_h_15_ENHANCED_CONSTRUCTORS \
+	Sword_Source_Sword_CustomData_h_24_PRIVATE_PROPERTY_OFFSET \
+	Sword_Source_Sword_CustomData_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	Sword_Source_Sword_CustomData_h_24_INCLASS_NO_PURE_DECLS \
+	Sword_Source_Sword_CustomData_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -89,4 +89,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID Sword_Source_Sword_CustomData_h
 
 
+#define FOREACH_ENUM_EHITTYPE(op) \
+	op(EHit_Inplace) \
+	op(EHit_InplaceDown) \
+	op(EHit_BackDown) \
+	op(EHit_Floating) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
