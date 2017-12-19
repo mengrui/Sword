@@ -6,8 +6,8 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 18,
-		"PatchVersion": 1,
-		"Changelist": 3754814,
+		"PatchVersion": 2,
+		"Changelist": 3794801,
 		"CompatibleChangelist": 3709383,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 1,
@@ -33,36 +33,6 @@
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.pdb",
 			"Type": "SymbolFile",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalytics.dll",
-			"Type": "DynamicLibrary",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalytics.pdb",
-			"Type": "SymbolFile",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameAnalytics.lib",
-			"Type": "ImportLibrary",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalyticsEditor.dll",
-			"Type": "DynamicLibrary",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalyticsEditor.pdb",
-			"Type": "SymbolFile",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameAnalyticsEditor.lib",
-			"Type": "ImportLibrary",
 			"IsPrecompiled": true
 		},
 		{
@@ -2324,21 +2294,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VulkanShaderFormat.lib",
-			"Type": "ImportLibrary",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.dll",
-			"Type": "DynamicLibrary",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.pdb",
-			"Type": "SymbolFile",
-			"IsPrecompiled": true
-		},
-		{
-			"Path": "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TextureFormatAndroid.lib",
 			"Type": "ImportLibrary",
 			"IsPrecompiled": true
 		},
@@ -5740,10 +5695,6 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/Sword.uproject",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/GameAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{
