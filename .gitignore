@@ -3,3 +3,6 @@
 
 /Saved
 /.response/.pdb/.bin/.dat/.log
+/Intermediate/AssetRegistryCache
+/Intermediate/ReimportCache
+/Intermediate/CachedAssetRegistry.bin
