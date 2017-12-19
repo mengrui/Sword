@@ -121,14 +121,6 @@ static struct FScriptStruct_Sword_StaticRegisterNativesFAttackCombo
 			};
 #endif
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpecialAttack_MetaData[] = {
-				{ "Category", "AnimDataAsset" },
-				{ "ModuleRelativePath", "AnimDataAsset.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FArrayPropertyParams NewProp_SpecialAttack = { UE4CodeGen_Private::EPropertyClass::Array, "SpecialAttack", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UAnimDataAsset, SpecialAttack), METADATA_PARAMS(NewProp_SpecialAttack_MetaData, ARRAY_COUNT(NewProp_SpecialAttack_MetaData)) };
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpecialAttack_Inner = { UE4CodeGen_Private::EPropertyClass::Object, "SpecialAttack", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Combos_MetaData[] = {
 				{ "Category", "AnimDataAsset" },
 				{ "ModuleRelativePath", "AnimDataAsset.h" },
@@ -137,8 +129,6 @@ static struct FScriptStruct_Sword_StaticRegisterNativesFAttackCombo
 			static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Combos = { UE4CodeGen_Private::EPropertyClass::Array, "Combos", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UAnimDataAsset, Combos), METADATA_PARAMS(NewProp_Combos_MetaData, ARRAY_COUNT(NewProp_Combos_MetaData)) };
 			static const UE4CodeGen_Private::FStructPropertyParams NewProp_Combos_Inner = { UE4CodeGen_Private::EPropertyClass::Struct, "Combos", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, Z_Construct_UScriptStruct_FAttackCombo, METADATA_PARAMS(nullptr, 0) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpecialAttack,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpecialAttack_Inner,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Combos,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Combos_Inner,
 			};
@@ -160,7 +150,7 @@ static struct FScriptStruct_Sword_StaticRegisterNativesFAttackCombo
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAnimDataAsset, 3326007557);
+	IMPLEMENT_CLASS(UAnimDataAsset, 1643487624);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimDataAsset(Z_Construct_UClass_UAnimDataAsset, &UAnimDataAsset::StaticClass, TEXT("/Script/Sword"), TEXT("UAnimDataAsset"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UAnimDataAsset);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
