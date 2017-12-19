@@ -36,6 +36,36 @@
 			"IsPrecompiled": true
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalytics.dll",
+			"Type": "DynamicLibrary",
+			"IsPrecompiled": true
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalytics.pdb",
+			"Type": "SymbolFile",
+			"IsPrecompiled": true
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameAnalytics.lib",
+			"Type": "ImportLibrary",
+			"IsPrecompiled": true
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalyticsEditor.dll",
+			"Type": "DynamicLibrary",
+			"IsPrecompiled": true
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Binaries/Win64/UE4Editor-GameAnalyticsEditor.pdb",
+			"Type": "SymbolFile",
+			"IsPrecompiled": true
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameAnalyticsEditor.lib",
+			"Type": "ImportLibrary",
+			"IsPrecompiled": true
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
 			"Type": "DynamicLibrary",
 			"IsPrecompiled": true
@@ -5710,6 +5740,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/Sword.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/GameAnalytics/GameAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{
