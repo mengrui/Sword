@@ -1,5 +1,4 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Performing full C++ include scan (no include cache file)
   Target is up to date
   Deploying SwordEditor Win64 Development...
-  Total build time: 1.88 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 0.92 seconds (NoActionsToExecute executor: 0.00 seconds)
