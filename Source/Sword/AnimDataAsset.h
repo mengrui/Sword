@@ -15,7 +15,7 @@ struct SWORD_API FAttackCombo
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	TArray<INT> InputIndex;
+	TArray<int> InputIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<UAnimSequence*> AnimSequence;

@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\Sword.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{93D9443D-962E-48C9-8DFD-007EB5E40941}</UniqueIdentifier>
+			<UniqueIdentifier>{2A30CE6C-EDD3-4B0F-A7DF-00A120D2B4DB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Sword.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{FFF60318-68E4-484C-842D-8C7E70D6B05C}</UniqueIdentifier>
+			<UniqueIdentifier>{33364DC2-DB6E-4163-9D79-BCFC00BA8475}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -31,7 +31,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\Sword">
-			<UniqueIdentifier>{B1061465-A567-40FC-9966-83F7BBA27107}</UniqueIdentifier>
+			<UniqueIdentifier>{1AF55168-F84D-4DEE-8330-3526890C98F0}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\Sword\AnimDataAsset.cpp">
 			<Filter>Source\Sword</Filter>
