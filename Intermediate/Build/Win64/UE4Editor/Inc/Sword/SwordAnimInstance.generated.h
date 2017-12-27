@@ -8,60 +8,13 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UAnimSequence;
-class UAnimMetaData;
-class UAnimDataAsset;
 #ifdef SWORD_SwordAnimInstance_generated_h
 #error "SwordAnimInstance.generated.h already included, missing '#pragma once' in SwordAnimInstance.h"
 #endif
 #define SWORD_SwordAnimInstance_generated_h
 
-#define Sword_Source_Sword_SwordAnimInstance_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execGetMetaData) \
-	{ \
-		P_GET_OBJECT(UAnimSequence,Z_Param_Sequnce); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAnimMetaData**)Z_Param__Result=this->GetMetaData(Z_Param_Sequnce,Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetComboAnimSequence) \
-	{ \
-		P_GET_OBJECT(UAnimDataAsset,Z_Param_Asset); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_InputIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAnimSequence**)Z_Param__Result=this->GetComboAnimSequence(Z_Param_Asset,Z_Param_InputIndex); \
-		P_NATIVE_END; \
-	}
-
-
-#define Sword_Source_Sword_SwordAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execGetMetaData) \
-	{ \
-		P_GET_OBJECT(UAnimSequence,Z_Param_Sequnce); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAnimMetaData**)Z_Param__Result=this->GetMetaData(Z_Param_Sequnce,Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetComboAnimSequence) \
-	{ \
-		P_GET_OBJECT(UAnimDataAsset,Z_Param_Asset); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_InputIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAnimSequence**)Z_Param__Result=this->GetComboAnimSequence(Z_Param_Asset,Z_Param_InputIndex); \
-		P_NATIVE_END; \
-	}
-
-
+#define Sword_Source_Sword_SwordAnimInstance_h_15_RPC_WRAPPERS
+#define Sword_Source_Sword_SwordAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define Sword_Source_Sword_SwordAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSwordAnimInstance(); \

@@ -14,3 +14,5 @@
 /Intermediate/Build/Win64/UE4Editor/Development/*.response
 /Intermediate/Build/Win64/UE4Editor/Development/*.exp
 /Intermediate/Build/Win64/UE4Editor/Development/*.lib
+/Intermediate/Android
+/Intermediate/Build/Android

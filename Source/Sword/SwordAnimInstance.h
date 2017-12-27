@@ -13,14 +13,4 @@ UCLASS()
 class SWORD_API USwordAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
-	
-public:
-	UFUNCTION(BlueprintCallable)
-	class UAnimSequence* GetComboAnimSequence(class UAnimDataAsset* Asset,int InputIndex);
-
-	UFUNCTION(BlueprintCallable)
-	class UAnimMetaData* GetMetaData(UAnimSequence* Sequnce,int Index) const;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<int> ComboInputCache;
 };
