@@ -1,4 +1,9 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Target is up to date
+  Performing 3 actions (4 in parallel)
+  SwordCharacter.cpp
+  [2/3] Link UE4Editor-Sword.dll
+  [3/3] Link UE4Editor-Sword.lib
+    正在创建库 F:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.lib 和对象 F:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.exp
+    正在创建库 F:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.suppressed.lib 和对象 F:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.suppressed.exp
   Deploying SwordEditor Win64 Development...
-  Total build time: 0.75 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 4.26 seconds (Local executor: 3.25 seconds)
