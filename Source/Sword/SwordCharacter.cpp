@@ -13,6 +13,8 @@
 #include "AnimDataAsset.h"
 #include "SwordAnimInstance.h"
 #include "Net/UnrealNetwork.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetStringLibrary.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ASwordCharacter
@@ -189,6 +191,17 @@ void ASwordCharacter::Tick(float DeltaSeconds)
 	{
 		GetCapsuleComponent()->SetCollisionObjectType(ECC_Pawn);
 	}
+
+	if (Role == ROLE_SimulatedProxy)
+	{
+		if (LastVelocityZ < 0 && GetVelocity().Z == 0)
+		{
+			Landed(FHitResult());
+		}
+		LastVelocityZ = GetVelocity().Z;
+		
+		//UKismetSystemLibrary::PrintWarning(UKismetStringLibrary::Conv_FloatToString(LastVelocityZ));
+	}
 }
 
 void ASwordCharacter::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
@@ -196,14 +209,7 @@ void ASwordCharacter::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & O
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME_CONDITION(ASwordCharacter, Blocking, COND_None);
-	DOREPLIFETIME_CONDITION(ASwordCharacter, LandHit, COND_SimulatedOnly);
 	DOREPLIFETIME_CONDITION(ASwordCharacter, ActionInput, COND_SimulatedOnly);
-}
-
-void ASwordCharacter::Landed(const FHitResult& Hit)
-{
-	Super::Landed(Hit);
-	LandHit++;
 }
 
 void ASwordCharacter::OnRep_ActionInput()
@@ -235,8 +241,7 @@ void ASwordCharacter::PlayAction(int attackType)
 
 			static const FName SlotName(TEXT("DefaultSlot"));
 			AnimBp->PlaySlotAnimationAsDynamicMontage(AnimSeq, SlotName, 0.1, 0.1, 1, 1, -1.f, StartTime);
-			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Action!"));
-			playAnim(AnimSeq);
+			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Action!"));;
 			CurHitType = hitType;
 			CanAttack = false;
 		}

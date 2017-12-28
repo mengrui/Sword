@@ -93,8 +93,6 @@ public:
 
 	void Tick(float DeltaSeconds);
 
-	virtual void Landed(const FHitResult& Hit);
-
 	UFUNCTION()
 	virtual void OnRep_ActionInput();
 
@@ -103,9 +101,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void PlayAction(int attackType);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void playAnim(UAnimSequence* seq);
 
 	UPROPERTY(BlueprintReadWrite, Replicated)
 	bool Blocking;
@@ -134,13 +129,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool CanAttack = true;
 
-	UFUNCTION()
-	void LandNotify()
-	{
-		Landed(FHitResult());
-	}
-
-	UPROPERTY(ReplicatedUsing= LandNotify)
-	int LandHit;
+private:
+	float LastVelocityZ = 0;
 };
 

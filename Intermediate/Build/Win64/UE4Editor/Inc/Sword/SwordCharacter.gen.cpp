@@ -22,10 +22,8 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_GetActionInput();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_GetComboAnimSequence();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
-	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_LandNotify();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_PlayAction();
-	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_playAnim();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_SetActionInput();
 	SWORD_API UEnum* Z_Construct_UEnum_Sword_EHitType();
 	SWORD_API UClass* Z_Construct_UClass_UAnimDataAsset_NoRegister();
@@ -83,13 +81,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return ReturnEnum;
 	}
-	static FName NAME_ASwordCharacter_playAnim = FName(TEXT("playAnim"));
-	void ASwordCharacter::playAnim(UAnimSequence* seq)
-	{
-		SwordCharacter_eventplayAnim_Parms Parms;
-		Parms.seq=seq;
-		ProcessEvent(FindFunctionChecked(NAME_ASwordCharacter_playAnim),&Parms);
-	}
 	void ASwordCharacter::StaticRegisterNativesASwordCharacter()
 	{
 		UClass* Class = ASwordCharacter::StaticClass();
@@ -97,7 +88,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 			{ "CanMove", (Native)&ASwordCharacter::execCanMove },
 			{ "GetActionInput", (Native)&ASwordCharacter::execGetActionInput },
 			{ "GetComboAnimSequence", (Native)&ASwordCharacter::execGetComboAnimSequence },
-			{ "LandNotify", (Native)&ASwordCharacter::execLandNotify },
 			{ "OnRep_ActionInput", (Native)&ASwordCharacter::execOnRep_ActionInput },
 			{ "PlayAction", (Native)&ASwordCharacter::execPlayAction },
 			{ "SetActionInput", (Native)&ASwordCharacter::execSetActionInput },
@@ -178,21 +168,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_ASwordCharacter_LandNotify()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "ModuleRelativePath", "SwordCharacter.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASwordCharacter, "LandNotify", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-		}
-		return ReturnFunction;
-	}
 	UFunction* Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -227,25 +202,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASwordCharacter, "PlayAction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(SwordCharacter_eventPlayAction_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-		}
-		return ReturnFunction;
-	}
-	UFunction* Z_Construct_UFunction_ASwordCharacter_playAnim()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_seq = { UE4CodeGen_Private::EPropertyClass::Object, "seq", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(SwordCharacter_eventplayAnim_Parms, seq), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_seq,
-			};
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "ModuleRelativePath", "SwordCharacter.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASwordCharacter, "playAnim", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, sizeof(SwordCharacter_eventplayAnim_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -291,10 +247,8 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 				{ &Z_Construct_UFunction_ASwordCharacter_CanMove, "CanMove" }, // 3678416734
 				{ &Z_Construct_UFunction_ASwordCharacter_GetActionInput, "GetActionInput" }, // 2336132722
 				{ &Z_Construct_UFunction_ASwordCharacter_GetComboAnimSequence, "GetComboAnimSequence" }, // 1610080216
-				{ &Z_Construct_UFunction_ASwordCharacter_LandNotify, "LandNotify" }, // 928829485
 				{ &Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput, "OnRep_ActionInput" }, // 694111346
 				{ &Z_Construct_UFunction_ASwordCharacter_PlayAction, "PlayAction" }, // 2814652579
-				{ &Z_Construct_UFunction_ASwordCharacter_playAnim, "playAnim" }, // 3174181977
 				{ &Z_Construct_UFunction_ASwordCharacter_SetActionInput, "SetActionInput" }, // 460948061
 			};
 #if WITH_METADATA
@@ -304,12 +258,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 				{ "ModuleRelativePath", "SwordCharacter.h" },
 			};
 #endif
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LandHit_MetaData[] = {
-				{ "ModuleRelativePath", "SwordCharacter.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_LandHit = { UE4CodeGen_Private::EPropertyClass::Int, "LandHit", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000100000020, 1, "LandNotify", STRUCT_OFFSET(ASwordCharacter, LandHit), METADATA_PARAMS(NewProp_LandHit_MetaData, ARRAY_COUNT(NewProp_LandHit_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanAttack_MetaData[] = {
 				{ "Category", "SwordCharacter" },
@@ -396,7 +344,6 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom = { UE4CodeGen_Private::EPropertyClass::Object, "CameraBoom", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_CameraBoom_MetaData, ARRAY_COUNT(NewProp_CameraBoom_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_LandHit,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CanAttack,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ActionInput,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Blocking,
@@ -427,7 +374,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASwordCharacter, 1857555562);
+	IMPLEMENT_CLASS(ASwordCharacter, 3056873749);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASwordCharacter(Z_Construct_UClass_ASwordCharacter, &ASwordCharacter::StaticClass, TEXT("/Script/Sword"), TEXT("ASwordCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASwordCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
