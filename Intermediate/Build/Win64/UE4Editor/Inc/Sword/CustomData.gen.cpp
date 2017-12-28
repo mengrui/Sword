@@ -107,27 +107,6 @@ void EmptyLinkFunctionForGeneratedCodeCustomData() {}
 #endif
 			static const UE4CodeGen_Private::FBytePropertyParams NewProp_HitType = { UE4CodeGen_Private::EPropertyClass::Byte, "HitType", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000015, 1, nullptr, STRUCT_OFFSET(UCustomData, HitType), Z_Construct_UEnum_Sword_EHitType, METADATA_PARAMS(NewProp_HitType_MetaData, ARRAY_COUNT(NewProp_HitType_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TraceEndTime_MetaData[] = {
-				{ "Category", "CustomData" },
-				{ "ModuleRelativePath", "CustomData.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TraceEndTime = { UE4CodeGen_Private::EPropertyClass::Float, "TraceEndTime", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000015, 1, nullptr, STRUCT_OFFSET(UCustomData, TraceEndTime), METADATA_PARAMS(NewProp_TraceEndTime_MetaData, ARRAY_COUNT(NewProp_TraceEndTime_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TraceStartTime_MetaData[] = {
-				{ "Category", "CustomData" },
-				{ "ModuleRelativePath", "CustomData.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TraceStartTime = { UE4CodeGen_Private::EPropertyClass::Float, "TraceStartTime", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000015, 1, nullptr, STRUCT_OFFSET(UCustomData, TraceStartTime), METADATA_PARAMS(NewProp_TraceStartTime_MetaData, ARRAY_COUNT(NewProp_TraceStartTime_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ComboNextTime_MetaData[] = {
-				{ "Category", "CustomData" },
-				{ "ModuleRelativePath", "CustomData.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ComboNextTime = { UE4CodeGen_Private::EPropertyClass::Float, "ComboNextTime", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000015, 1, nullptr, STRUCT_OFFSET(UCustomData, ComboNextTime), METADATA_PARAMS(NewProp_ComboNextTime_MetaData, ARRAY_COUNT(NewProp_ComboNextTime_MetaData)) };
-#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ComboStartTime_MetaData[] = {
 				{ "Category", "CustomData" },
 				{ "ModuleRelativePath", "CustomData.h" },
@@ -136,9 +115,6 @@ void EmptyLinkFunctionForGeneratedCodeCustomData() {}
 			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ComboStartTime = { UE4CodeGen_Private::EPropertyClass::Float, "ComboStartTime", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000015, 1, nullptr, STRUCT_OFFSET(UCustomData, ComboStartTime), METADATA_PARAMS(NewProp_ComboStartTime_MetaData, ARRAY_COUNT(NewProp_ComboStartTime_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HitType,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_TraceEndTime,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_TraceStartTime,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ComboNextTime,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ComboStartTime,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -159,7 +135,7 @@ void EmptyLinkFunctionForGeneratedCodeCustomData() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCustomData, 535087470);
+	IMPLEMENT_CLASS(UCustomData, 1734023206);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomData(Z_Construct_UClass_UCustomData, &UCustomData::StaticClass, TEXT("/Script/Sword"), TEXT("UCustomData"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomData);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

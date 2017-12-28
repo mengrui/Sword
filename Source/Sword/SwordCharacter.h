@@ -93,17 +93,6 @@ public:
 
 	void Tick(float DeltaSeconds);
 
-	void SetCanAttack()
-	{
-		CanAttack = true;
-	}
-
-	UFUNCTION(BlueprintImplementableEvent)
-	void StartTrace();
-
-	UFUNCTION(BlueprintImplementableEvent)
-	void EndTrace();
-
 	virtual void Landed(const FHitResult& Hit);
 
 	UFUNCTION()

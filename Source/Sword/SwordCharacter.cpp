@@ -13,7 +13,6 @@
 #include "AnimDataAsset.h"
 #include "SwordAnimInstance.h"
 #include "Net/UnrealNetwork.h"
-#include "TimerManager.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ASwordCharacter
@@ -226,27 +225,12 @@ void ASwordCharacter::PlayAction(int attackType)
 			{
 				UCustomData* data = Cast<UCustomData>(AnimSeq->GetMetaData()[0]);
 				StartTime = data->ComboStartTime;
-
-				if (ComboInputCache.Num() == 1)
-				{
-					StartTime = 0;
-				}
-
-				if (data->ComboNextTime > StartTime)
-				{
-					FTimerHandle hTime;
-					GetWorldTimerManager().SetTimer(hTime,this, &ASwordCharacter::SetCanAttack, data->ComboNextTime - StartTime);
-				}
-
-				if (data->TraceEndTime > data->TraceStartTime&&data->TraceStartTime > StartTime)
-				{
-					FTimerHandle hTraceStart;
-					GetWorldTimerManager().SetTimer(hTraceStart, this, &ASwordCharacter::StartTrace, data->TraceStartTime - StartTime);
-					FTimerHandle hTraceEnd;
-					GetWorldTimerManager().SetTimer(hTraceEnd, this, &ASwordCharacter::EndTrace, data->TraceEndTime - StartTime);
-				}
-				
 				hitType = data->HitType;
+			}
+
+			if (ComboInputCache.Num() == 1)
+			{
+				StartTime = 0;
 			}
 
 			static const FName SlotName(TEXT("DefaultSlot"));

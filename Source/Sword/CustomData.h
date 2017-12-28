@@ -28,14 +28,5 @@ public:
 	float ComboStartTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float ComboNextTime;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float TraceStartTime;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float TraceEndTime;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TEnumAsByte<EHitType> HitType;
 };
