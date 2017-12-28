@@ -96,6 +96,9 @@ public:
 	UFUNCTION()
 	virtual void OnRep_ActionInput();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnAttack();
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<int> ComboInputCache;
 

@@ -241,6 +241,7 @@ void ASwordCharacter::PlayAction(int attackType)
 
 			static const FName SlotName(TEXT("DefaultSlot"));
 			AnimBp->PlaySlotAnimationAsDynamicMontage(AnimSeq, SlotName, 0.1, 0.1, 1, 1, -1.f, StartTime);
+			OnAttack();
 			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Action!"));;
 			CurHitType = hitType;
 			CanAttack = false;

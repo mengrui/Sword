@@ -122,6 +122,8 @@ class UAnimSequence;
 	}
 
 
+#define Sword_Source_Sword_SwordCharacter_h_21_EVENT_PARMS
+#define Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS
 #define Sword_Source_Sword_SwordCharacter_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASwordCharacter(); \
@@ -172,12 +174,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASwordCharacter); \
 	FORCEINLINE static uint32 __PPO__CurHitType() { return STRUCT_OFFSET(ASwordCharacter, CurHitType); }
 
 
-#define Sword_Source_Sword_SwordCharacter_h_18_PROLOG
+#define Sword_Source_Sword_SwordCharacter_h_18_PROLOG \
+	Sword_Source_Sword_SwordCharacter_h_21_EVENT_PARMS
+
+
 #define Sword_Source_Sword_SwordCharacter_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Sword_Source_Sword_SwordCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
 	Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS \
+	Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS \
 	Sword_Source_Sword_SwordCharacter_h_21_INCLASS \
 	Sword_Source_Sword_SwordCharacter_h_21_STANDARD_CONSTRUCTORS \
 public: \
@@ -189,6 +195,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Sword_Source_Sword_SwordCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
 	Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS \
 	Sword_Source_Sword_SwordCharacter_h_21_INCLASS_NO_PURE_DECLS \
 	Sword_Source_Sword_SwordCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \
