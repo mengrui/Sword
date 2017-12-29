@@ -33,6 +33,4 @@ public:
 	void EndTrace();
 protected:
 	virtual void OnUpdateTransform(EUpdateTransformFlags UpdateTransformFlags, ETeleportType Teleport = ETeleportType::None) override;
-	
-	bool bActive = false;
 };
