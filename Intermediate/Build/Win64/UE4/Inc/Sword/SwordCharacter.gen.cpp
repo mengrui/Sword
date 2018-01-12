@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_GetActionInput();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_GetComboAnimSequence();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
+	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_OnAttack();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_PlayAction();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_SetActionInput();
@@ -80,6 +81,11 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
 		return ReturnEnum;
+	}
+	static FName NAME_ASwordCharacter_OnAttack = FName(TEXT("OnAttack"));
+	void ASwordCharacter::OnAttack()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ASwordCharacter_OnAttack),NULL);
 	}
 	void ASwordCharacter::StaticRegisterNativesASwordCharacter()
 	{
@@ -168,6 +174,21 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_ASwordCharacter_OnAttack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "SwordCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASwordCharacter, "OnAttack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UFunction* Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -247,6 +268,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 				{ &Z_Construct_UFunction_ASwordCharacter_CanMove, "CanMove" }, // 3678416734
 				{ &Z_Construct_UFunction_ASwordCharacter_GetActionInput, "GetActionInput" }, // 2336132722
 				{ &Z_Construct_UFunction_ASwordCharacter_GetComboAnimSequence, "GetComboAnimSequence" }, // 1610080216
+				{ &Z_Construct_UFunction_ASwordCharacter_OnAttack, "OnAttack" }, // 1938872007
 				{ &Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput, "OnRep_ActionInput" }, // 694111346
 				{ &Z_Construct_UFunction_ASwordCharacter_PlayAction, "PlayAction" }, // 2814652579
 				{ &Z_Construct_UFunction_ASwordCharacter_SetActionInput, "SetActionInput" }, // 460948061
@@ -374,7 +396,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASwordCharacter, 3056873749);
+	IMPLEMENT_CLASS(ASwordCharacter, 3469916526);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASwordCharacter(Z_Construct_UClass_ASwordCharacter, &ASwordCharacter::StaticClass, TEXT("/Script/Sword"), TEXT("ASwordCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASwordCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
