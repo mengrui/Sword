@@ -1,3 +1,4 @@
 E:\Sword\Source\Sword\Sword.Build.cs
 E:\Sword\Source\Sword.Target.cs
 E:\Sword\Source\SwordEditor.Target.cs
+E:\Sword\Source\SwordServer.Target.cs
