@@ -1,3 +1,4 @@
-D:\Unreal Projects\Sword\Source\Sword\Sword.Build.cs
-D:\Unreal Projects\Sword\Source\Sword.Target.cs
-D:\Unreal Projects\Sword\Source\SwordEditor.Target.cs
+E:\Sword\Source\Sword\Sword.Build.cs
+E:\Sword\Source\Sword.Target.cs
+E:\Sword\Source\SwordEditor.Target.cs
+E:\Sword\Source\SwordServer.Target.cs

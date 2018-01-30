@@ -5,9 +5,16 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/GameUserSettings.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "AnimDataAsset.h"
+#include "SwordAnimInstance.h"
+#include "Net/UnrealNetwork.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetStringLibrary.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ASwordCharacter
@@ -84,29 +91,31 @@ void ASwordCharacter::OnResetVR()
 
 void ASwordCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		Jump();
+	//Jump();
 }
 
 void ASwordCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		StopJumping();
+	//StopJumping();
 }
 
 void ASwordCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	if(CanMove())
+		AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
 void ASwordCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+	if(CanMove()) 
+		AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
 void ASwordCharacter::MoveForward(float Value)
 {
-	if ((Controller != NULL) && (Value != 0.0f))
+	if ((Controller != NULL) && (Value != 0.0f) && CanMove())
 	{
 		// find out which way is forward
 		const FRotator Rotation = Controller->GetControlRotation();
@@ -120,7 +129,7 @@ void ASwordCharacter::MoveForward(float Value)
 
 void ASwordCharacter::MoveRight(float Value)
 {
-	if ( (Controller != NULL) && (Value != 0.0f) )
+	if ( (Controller != NULL) && (Value != 0.0f) && CanMove())
 	{
 		// find out which way is right
 		const FRotator Rotation = Controller->GetControlRotation();
@@ -130,5 +139,113 @@ void ASwordCharacter::MoveRight(float Value)
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
+	}
+}
+
+UAnimSequence* ASwordCharacter::GetComboAnimSequence(int InputIndex)
+{
+	if (AnimSet == nullptr) return nullptr;
+
+	ComboInputCache.Add(InputIndex);
+	for (int i = 0; i < AnimSet->Combos.Num(); i++)
+	{
+		auto indices = AnimSet->Combos[i].InputIndex;
+		const TArray<UAnimSequence*>& Anims = AnimSet->Combos[i].AnimSequence;
+		if (ComboInputCache.Num() <= indices.Num() && ComboInputCache.Num() <= Anims.Num())
+		{
+			indices.SetNum(ComboInputCache.Num());
+			if (indices == ComboInputCache)
+			{
+				return Anims[ComboInputCache.Num() - 1];
+			}
+		}
+	}
+
+	return nullptr;
+}
+
+bool ASwordCharacter::CanMove() const
+{
+	return !Blocking;
+}
+
+void ASwordCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	auto AnimBp = GetMesh()->GetAnimInstance();
+	if (AnimBp != nullptr)
+	{
+		if (!AnimBp->IsAnyMontagePlaying())
+		{
+			CanAttack = true;
+			ComboInputCache.Empty();	
+		}
+	}
+
+	if (GetCharacterMovement()->IsWalking())
+	{
+		GetCapsuleComponent()->SetCollisionObjectType(ECC_WorldDynamic);
+	}
+	else
+	{
+		GetCapsuleComponent()->SetCollisionObjectType(ECC_Pawn);
+	}
+
+	if (Role == ROLE_SimulatedProxy)
+	{
+		if (LastVelocityZ < 0 && GetVelocity().Z == 0)
+		{
+			Landed(FHitResult());
+		}
+		LastVelocityZ = GetVelocity().Z;
+		
+		//UKismetSystemLibrary::PrintWarning(UKismetStringLibrary::Conv_FloatToString(LastVelocityZ));
+	}
+}
+
+void ASwordCharacter::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME_CONDITION(ASwordCharacter, Blocking, COND_None);
+	DOREPLIFETIME_CONDITION(ASwordCharacter, ActionInput, COND_SimulatedOnly);
+}
+
+void ASwordCharacter::OnRep_ActionInput()
+{
+	PlayAction(GetActionInput());
+}
+
+void ASwordCharacter::PlayAction(int attackType)
+{
+	auto AnimBp = GetMesh()->GetAnimInstance();
+	if (AnimBp != nullptr)
+	{
+		auto AnimSeq = GetComboAnimSequence(attackType);
+		if (AnimSeq)
+		{
+			float StartTime = 0;
+			EHitType hitType = EHit_Inplace;
+			if (AnimSeq->GetMetaData().Num()>0)
+			{
+				UCustomData* data = Cast<UCustomData>(AnimSeq->GetMetaData()[0]);
+				StartTime = data->ComboStartTime;
+				hitType = data->HitType;
+			}
+
+			if (ComboInputCache.Num() == 1)
+			{
+				StartTime = 0;
+			}
+
+			static const FName SlotName(TEXT("DefaultSlot"));
+			AnimBp->PlaySlotAnimationAsDynamicMontage(AnimSeq, SlotName, 0.1, 0.1, 1, 1, -1.f, StartTime);
+			//AnimBp->PlaySlotAnimation(AnimSeq, SlotName, 0.1, 0.1, 1, 1);
+			OnAttack();
+			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Action!"));;
+			CurHitType = hitType;
+			CanAttack = false;
+		}
 	}
 }

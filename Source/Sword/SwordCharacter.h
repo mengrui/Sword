@@ -4,7 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "CustomData.h"
 #include "SwordCharacter.generated.h"
+
+UENUM(BlueprintType)
+enum EBodyPose
+{
+	EBodyPose_Stand UMETA(DisplayName = "Stand"),
+	EBodyPose_FaceUp UMETA(DisplayName = "FaceUp"),
+	EBodyPose_FaceDown UMETA(DisplayName = "FaceDown"),
+};
 
 UCLASS(config=Game)
 class ASwordCharacter : public ACharacter
@@ -28,6 +37,9 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn)
+	class UAnimDataAsset*		AnimSet;
 
 protected:
 
@@ -63,10 +75,64 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
 
+	UPROPERTY(BlueprintReadWrite)
+	TEnumAsByte<EHitType> CurHitType;
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+public:
+	UFUNCTION(BlueprintCallable)
+	class UAnimSequence* GetComboAnimSequence(int InputIndex);
+
+	UFUNCTION(BlueprintPure)
+	bool CanMove() const;
+
+	void Tick(float DeltaSeconds);
+
+	UFUNCTION()
+	virtual void OnRep_ActionInput();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnAttack();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<int> ComboInputCache;
+
+	UFUNCTION(BlueprintCallable)
+	void PlayAction(int attackType);
+
+	UPROPERTY(BlueprintReadWrite, Replicated)
+	bool Blocking;
+
+	UFUNCTION(BlueprintSetter)
+	void SetActionInput(int index)
+	{
+		int count = (ActionInput >> 16) + 1;
+		count = count << 16;
+		index &= 0x0000ffff;
+		ActionInput = count | index;
+	}
+
+	UFUNCTION(BlueprintGetter)
+	int GetActionInput() const
+	{
+		return ActionInput & 0x0000ffff;
+	}
+
+	UPROPERTY(BlueprintReadWrite,ReplicatedUsing=OnRep_ActionInput, BlueprintSetter=SetActionInput, BlueprintGetter=GetActionInput)
+	int ActionInput = 0;
+
+	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Replicated)
+	//TEnumAsByte<EBodyPose> BodyPose;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool CanAttack = true;
+
+private:
+	float LastVelocityZ = 0;
 };
 
