@@ -1,5 +1,6 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build.
+﻿  Performing full C++ include scan (building a new target)
+  Using 'git status' to determine working set for adaptive non-unity build.
   Creating makefile for SwordEditor (UnrealBuildTool.exe is newer)
   Target is up to date
   Deploying SwordEditor Win64 Development...
-  Total build time: 52.26 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 28.04 seconds (NoActionsToExecute executor: 0.00 seconds)
