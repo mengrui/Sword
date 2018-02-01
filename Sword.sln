@@ -3869,7 +3869,8 @@ Global
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|Mac.ActiveCfg = Development_Game|x64
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|TVOS.ActiveCfg = Development_Game|x64
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|Win32.ActiveCfg = Development_Game|x64
-		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|Win64.ActiveCfg = Development_Game|x64
+		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|Win64.ActiveCfg = Development_Server|x64
+		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development Server|Win64.Build.0 = Development_Server|x64
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development|Android.ActiveCfg = Debug_Server|x64
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development|Android.Build.0 = Debug_Server|x64
 		{2F4C35AC-6B44-45B3-8734-86C41422AC71}.Development|HTML5.ActiveCfg = Debug_Server|x64
