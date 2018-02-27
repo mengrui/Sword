@@ -48,24 +48,16 @@ void EmptyLinkFunctionForGeneratedCodeTrackCollisionComponent() {}
 	}
 	UFunction* Z_Construct_UFunction_UTrackCollisionComponent_StartTrace()
 	{
-		struct TrackCollisionComponent_eventStartTrace_Parms
-		{
-			TEnumAsByte<EObjectTypeQuery> InTraceChannel;
-		};
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			static const UE4CodeGen_Private::FBytePropertyParams NewProp_InTraceChannel = { UE4CodeGen_Private::EPropertyClass::Byte, "InTraceChannel", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(TrackCollisionComponent_eventStartTrace_Parms, InTraceChannel), Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_InTraceChannel,
-			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "Category", "Trace" },
 				{ "ModuleRelativePath", "TrackCollisionComponent.h" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTrackCollisionComponent, "StartTrace", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(TrackCollisionComponent_eventStartTrace_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTrackCollisionComponent, "StartTrace", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -85,7 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeTrackCollisionComponent() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_UTrackCollisionComponent_EndTrace, "EndTrace" }, // 2480630299
-				{ &Z_Construct_UFunction_UTrackCollisionComponent_StartTrace, "StartTrace" }, // 1863148143
+				{ &Z_Construct_UFunction_UTrackCollisionComponent_StartTrace, "StartTrace" }, // 1252037767
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -96,6 +88,14 @@ void EmptyLinkFunctionForGeneratedCodeTrackCollisionComponent() {}
 				{ "ModuleRelativePath", "TrackCollisionComponent.h" },
 			};
 #endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TraceChannels_MetaData[] = {
+				{ "Category", "TrackCollisionComponent" },
+				{ "ModuleRelativePath", "TrackCollisionComponent.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FArrayPropertyParams NewProp_TraceChannels = { UE4CodeGen_Private::EPropertyClass::Array, "TraceChannels", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(UTrackCollisionComponent, TraceChannels), METADATA_PARAMS(NewProp_TraceChannels_MetaData, ARRAY_COUNT(NewProp_TraceChannels_MetaData)) };
+			static const UE4CodeGen_Private::FBytePropertyParams NewProp_TraceChannels_Inner = { UE4CodeGen_Private::EPropertyClass::Byte, "TraceChannels", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NumSection_MetaData[] = {
 				{ "Category", "TrackCollisionComponent" },
@@ -112,6 +112,8 @@ void EmptyLinkFunctionForGeneratedCodeTrackCollisionComponent() {}
 			auto NewProp_bDebugDraw_SetBit = [](void* Obj){ ((UTrackCollisionComponent*)Obj)->bDebugDraw = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDebugDraw = { UE4CodeGen_Private::EPropertyClass::Bool, "bDebugDraw", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(UTrackCollisionComponent), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bDebugDraw_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bDebugDraw_MetaData, ARRAY_COUNT(NewProp_bDebugDraw_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_TraceChannels,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_TraceChannels_Inner,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_NumSection,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bDebugDraw,
 			};
@@ -133,7 +135,7 @@ void EmptyLinkFunctionForGeneratedCodeTrackCollisionComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTrackCollisionComponent, 2993752325);
+	IMPLEMENT_CLASS(UTrackCollisionComponent, 3871760714);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTrackCollisionComponent(Z_Construct_UClass_UTrackCollisionComponent, &UTrackCollisionComponent::StaticClass, TEXT("/Script/Sword"), TEXT("UTrackCollisionComponent"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTrackCollisionComponent);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

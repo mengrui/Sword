@@ -25,10 +25,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execStartTrace) \
 	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_InTraceChannel); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->StartTrace(EObjectTypeQuery(Z_Param_InTraceChannel)); \
+		this->StartTrace(); \
 		P_NATIVE_END; \
 	}
 
@@ -45,10 +44,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execStartTrace) \
 	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_InTraceChannel); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->StartTrace(EObjectTypeQuery(Z_Param_InTraceChannel)); \
+		this->StartTrace(); \
 		P_NATIVE_END; \
 	}
 

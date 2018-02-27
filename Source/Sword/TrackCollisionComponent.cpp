@@ -4,14 +4,13 @@
 #include "Engine.h"
 #include "Kismet/KismetStringLibrary.h"
 
-void UTrackCollisionComponent::StartTrace(EObjectTypeQuery InTraceChannel)
+void UTrackCollisionComponent::StartTrace()
 {
 	if (NumSection == 0)
 	{
 		return;
 	}
 
-	TraceChannel = InTraceChannel;
 	bTrace = true;
 	FVector Extent = GetScaledBoxExtent();
 	
@@ -37,14 +36,14 @@ void UTrackCollisionComponent::OnUpdateTransform(EUpdateTransformFlags UpdateTra
 
 	if (LastCheckPoints.Num() != NumSection)
 	{
-		StartTrace(TraceChannel);
+		StartTrace();
 	}
 
 	FHitResult Hit;
 	FVector Extent = GetScaledBoxExtent();
 	FVector StepVec = (FVector(0, 0, Extent.Z) - FVector(0, 0, -Extent.Z)) / float(NumSection);
-	TArray<TEnumAsByte<EObjectTypeQuery> > ObjectTypes;
-	ObjectTypes.Add(TraceChannel);
+	//TArray<TEnumAsByte<EObjectTypeQuery> > ObjectTypes;
+	//ObjectTypes.Add(TraceChannel);
 	TArray<AActor*> IgnoreActors;
 	IgnoreActors.Add(GetOwner());
 
@@ -57,7 +56,7 @@ void UTrackCollisionComponent::OnUpdateTransform(EUpdateTransformFlags UpdateTra
 			this,
 			LastPos, CurPos, FVector(Extent.X, Extent.Y, StepVec.Size()*0.5f),
 			GetComponentTransform().GetRotation().Rotator(),
-			ObjectTypes,
+			TraceChannels,
 			true, IgnoreActors,
 			bDebugDraw ? EDrawDebugTrace::Type::ForDuration : EDrawDebugTrace::None,
 			Hit, true);

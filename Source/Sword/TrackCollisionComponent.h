@@ -21,13 +21,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = TrackCollisionComponent)
 	float  NumSection = 5;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = TrackCollisionComponent)
+	TArray<TEnumAsByte<EObjectTypeQuery> >  TraceChannels;
 private:
 	bool bTrace = false;
 	TArray<FVector> LastCheckPoints;
-	EObjectTypeQuery TraceChannel = ObjectTypeQuery_MAX;
+
 public:
 	UFUNCTION(BlueprintCallable, Category = "Trace")
-	void StartTrace(EObjectTypeQuery InTraceChannel);
+	void StartTrace();
 
 	UFUNCTION(BlueprintCallable, Category = "Trace")
 	void EndTrace();
