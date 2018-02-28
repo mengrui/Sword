@@ -21,6 +21,7 @@
 
 ASwordCharacter::ASwordCharacter()
 {
+	Weapons.SetNum(5);
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
@@ -247,5 +248,53 @@ void ASwordCharacter::PlayAction(int attackType)
 			CurHitType = hitType;
 			CanAttack = false;
 		}
+	}
+}
+
+void ASwordCharacter::SwitchWeapon(int Index)
+{
+
+}
+
+void ASwordCharacter::DropWeapon(AWeapon* newWeapon)
+{
+}
+
+void ASwordCharacter::PickUpWeapon(AWeapon* newWeapon)
+{
+	if (newWeapon->CanProject)
+	{
+		DropWeapon(Weapons[4]);
+		Weapons[4] = newWeapon;
+	}
+	else if (Weapons[0] == nullptr)
+	{
+		Weapons[0] = newWeapon;
+	}
+	else if(Weapons[0]->CanDualHandle&&newWeapon->CanDualHandle&&Weapons[1] == nullptr)
+	{
+		Weapons[1] = newWeapon;
+	}
+	else if (Weapons[2] == nullptr)
+	{
+		Weapons[2] = newWeapon;
+	}
+	else if (Weapons[2]->CanDualHandle&&Weapons[3] == nullptr)
+	{
+		Weapons[3] = newWeapon;
+	}
+	else
+	{
+		if (Weapons[0]->CanDualHandle&&newWeapon->CanDualHandle)
+		{
+			DropWeapon(Weapons[0]);
+			Weapons[0] = newWeapon;
+		}
+		DropWeapon(Weapons[0]);
+		Weapons[0] = nullptr;
+		DropWeapon(Weapons[1]);
+		Weapons[1] = nullptr;
+
+
 	}
 }

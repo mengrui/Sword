@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "CustomData.h"
+#include "Weapon.h"
 #include "SwordCharacter.generated.h"
 
 UENUM(BlueprintType)
@@ -131,6 +132,21 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool CanAttack = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<AWeapon*>  Weapons;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int CurWeaponIndex = 0;
+
+	UFUNCTION(BlueprintCallable)
+	void PickUpWeapon(AWeapon*);
+
+	UFUNCTION(BlueprintCallable)
+	void DropWeapon(AWeapon*);
+
+	UFUNCTION(BlueprintCallable)
+	void SwitchWeapon(int Index);
 
 private:
 	float LastVelocityZ = 0;

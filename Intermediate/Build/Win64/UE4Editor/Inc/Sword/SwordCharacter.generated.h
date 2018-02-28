@@ -14,7 +14,7 @@ class UAnimSequence;
 #endif
 #define SWORD_SwordCharacter_generated_h
 
-#define Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS \
+#define Sword_Source_Sword_SwordCharacter_h_22_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetActionInput) \
 	{ \
@@ -68,7 +68,7 @@ class UAnimSequence;
 	}
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Sword_Source_Sword_SwordCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetActionInput) \
 	{ \
@@ -122,9 +122,9 @@ class UAnimSequence;
 	}
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_EVENT_PARMS
-#define Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS
-#define Sword_Source_Sword_SwordCharacter_h_21_INCLASS_NO_PURE_DECLS \
+#define Sword_Source_Sword_SwordCharacter_h_22_EVENT_PARMS
+#define Sword_Source_Sword_SwordCharacter_h_22_CALLBACK_WRAPPERS
+#define Sword_Source_Sword_SwordCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASwordCharacter(); \
 	friend SWORD_API class UClass* Z_Construct_UClass_ASwordCharacter(); \
@@ -134,7 +134,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_INCLASS \
+#define Sword_Source_Sword_SwordCharacter_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesASwordCharacter(); \
 	friend SWORD_API class UClass* Z_Construct_UClass_ASwordCharacter(); \
@@ -144,7 +144,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_STANDARD_CONSTRUCTORS \
+#define Sword_Source_Sword_SwordCharacter_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASwordCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASwordCharacter) \
@@ -157,7 +157,7 @@ private: \
 public:
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_ENHANCED_CONSTRUCTORS \
+#define Sword_Source_Sword_SwordCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASwordCharacter(ASwordCharacter&&); \
@@ -168,36 +168,36 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASwordCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASwordCharacter)
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+#define Sword_Source_Sword_SwordCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ASwordCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ASwordCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__CurHitType() { return STRUCT_OFFSET(ASwordCharacter, CurHitType); }
 
 
-#define Sword_Source_Sword_SwordCharacter_h_18_PROLOG \
-	Sword_Source_Sword_SwordCharacter_h_21_EVENT_PARMS
+#define Sword_Source_Sword_SwordCharacter_h_19_PROLOG \
+	Sword_Source_Sword_SwordCharacter_h_22_EVENT_PARMS
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_GENERATED_BODY_LEGACY \
+#define Sword_Source_Sword_SwordCharacter_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Sword_Source_Sword_SwordCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS \
-	Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS \
-	Sword_Source_Sword_SwordCharacter_h_21_INCLASS \
-	Sword_Source_Sword_SwordCharacter_h_21_STANDARD_CONSTRUCTORS \
+	Sword_Source_Sword_SwordCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	Sword_Source_Sword_SwordCharacter_h_22_RPC_WRAPPERS \
+	Sword_Source_Sword_SwordCharacter_h_22_CALLBACK_WRAPPERS \
+	Sword_Source_Sword_SwordCharacter_h_22_INCLASS \
+	Sword_Source_Sword_SwordCharacter_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Sword_Source_Sword_SwordCharacter_h_21_GENERATED_BODY \
+#define Sword_Source_Sword_SwordCharacter_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Sword_Source_Sword_SwordCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	Sword_Source_Sword_SwordCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	Sword_Source_Sword_SwordCharacter_h_21_CALLBACK_WRAPPERS \
-	Sword_Source_Sword_SwordCharacter_h_21_INCLASS_NO_PURE_DECLS \
-	Sword_Source_Sword_SwordCharacter_h_21_ENHANCED_CONSTRUCTORS \
+	Sword_Source_Sword_SwordCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	Sword_Source_Sword_SwordCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	Sword_Source_Sword_SwordCharacter_h_22_CALLBACK_WRAPPERS \
+	Sword_Source_Sword_SwordCharacter_h_22_INCLASS_NO_PURE_DECLS \
+	Sword_Source_Sword_SwordCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

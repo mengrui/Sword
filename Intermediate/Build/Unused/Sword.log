@@ -1,9 +1,25 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Performing 3 actions (4 in parallel)
-  TrackCollisionComponent.cpp
-  [2/3] Link UE4Editor-Sword.dll
-  [3/3] Link UE4Editor-Sword.lib
+  Creating makefile for SwordEditor (no existing makefile)
+  Building UnrealHeaderTool...
+  Using 'git status' to determine working set for adaptive non-unity build.
+  Waiting for 'git status' command to complete
+  Target is up to date
+  Total build time: 0.65 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Parsing headers for SwordEditor
+    Running UnrealHeaderTool "E:\Sword\Sword.uproject" "E:\Sword\Intermediate\Build\Win64\SwordEditor\Development\SwordEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors
+  Reflection code generated for SwordEditor in 7.5921912 seconds
+  Deleting old hot reload file: "E:\Sword\Binaries\Win64\UE4Editor-Sword-6806.dll".
+  Deleting old hot reload file: "E:\Sword\Binaries\Win64\UE4Editor-Sword-6806.pdb".
+  Performing 8 actions (4 in parallel)
+  Weapon.cpp
+  SwordCharacter.cpp
+  SwordGameMode.cpp
+  Sword.init.gen.cpp
+  SwordCharacter.gen.cpp
+  Weapon.gen.cpp
+  [7/8] Link UE4Editor-Sword.dll
+  [8/8] Link UE4Editor-Sword.lib
     正在创建库 E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.lib 和对象 E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.exp
     正在创建库 E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.suppressed.lib 和对象 E:\Sword\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Sword.suppressed.exp
   Deploying SwordEditor Win64 Development...
-  Total build time: 15.63 seconds (Local executor: 13.27 seconds)
+  Total build time: 25.72 seconds (Local executor: 4.13 seconds)

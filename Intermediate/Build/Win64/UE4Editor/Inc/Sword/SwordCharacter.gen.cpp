@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_OnRep_ActionInput();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_PlayAction();
 	SWORD_API UFunction* Z_Construct_UFunction_ASwordCharacter_SetActionInput();
+	SWORD_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 	SWORD_API UEnum* Z_Construct_UEnum_Sword_EHitType();
 	SWORD_API UClass* Z_Construct_UClass_UAnimDataAsset_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -281,6 +282,21 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurWeaponIndex_MetaData[] = {
+				{ "Category", "SwordCharacter" },
+				{ "ModuleRelativePath", "SwordCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_CurWeaponIndex = { UE4CodeGen_Private::EPropertyClass::Int, "CurWeaponIndex", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, CurWeaponIndex), METADATA_PARAMS(NewProp_CurWeaponIndex_MetaData, ARRAY_COUNT(NewProp_CurWeaponIndex_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapons_MetaData[] = {
+				{ "Category", "SwordCharacter" },
+				{ "ModuleRelativePath", "SwordCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Weapons = { UE4CodeGen_Private::EPropertyClass::Array, "Weapons", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, Weapons), METADATA_PARAMS(NewProp_Weapons_MetaData, ARRAY_COUNT(NewProp_Weapons_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapons_Inner = { UE4CodeGen_Private::EPropertyClass::Object, "Weapons", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanAttack_MetaData[] = {
 				{ "Category", "SwordCharacter" },
 				{ "ModuleRelativePath", "SwordCharacter.h" },
@@ -366,6 +382,9 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom = { UE4CodeGen_Private::EPropertyClass::Object, "CameraBoom", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(ASwordCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_CameraBoom_MetaData, ARRAY_COUNT(NewProp_CameraBoom_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CurWeaponIndex,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Weapons,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Weapons_Inner,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CanAttack,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ActionInput,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Blocking,
@@ -396,7 +415,7 @@ void EmptyLinkFunctionForGeneratedCodeSwordCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASwordCharacter, 3469916526);
+	IMPLEMENT_CLASS(ASwordCharacter, 1880643354);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASwordCharacter(Z_Construct_UClass_ASwordCharacter, &ASwordCharacter::StaticClass, TEXT("/Script/Sword"), TEXT("ASwordCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASwordCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
